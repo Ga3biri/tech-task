@@ -1,0 +1,42 @@
+<section id="list">
+    <div class="container-fluid mt-3">
+        <nav>
+            <div class="row justify-content-center mb-3">
+                <div class="col-6 offset-3">
+                    <button class="btn btn-warning" (click)="backToLogin()" >Back To Login</button> |
+                    <button class="btn btn-success" [routerLink]="['add']" routerLinkActive="router-link-active" >Add New Product</button> 
+                </div>
+            </div>
+        </nav>
+        <div class="card">
+            <div class="row">
+              <div class="col-md-12 position-relative">
+                  <table class="table table-striped mt-5">
+                      <thead>
+                        <tr>
+                          <th scope="col"> Count </th>
+                          <th scope="col">  Price </th>
+                          <th scope="col">  Category </th>
+                          <th scope="col">  Image </th>
+                          <th scope="col">  Details  </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let product of products;let i=index">
+                          <td>{{product?.rating?.count}}</td>
+                          <td>{{product?.price}}</td>
+                          <td>{{product?.category}}</td>
+                          <td>
+                            <img style="width: 50px;height: 50px;border-radius: 50%;" src="{{product?.image}}" onerror="this.src='assets/images/download.jpeg'"  alt="image">
+                          </td>
+                          <td>
+                              <button class="btn btn-info" (click)="productDetails(product.id)">Details</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+          </div>
+    </div>
+  </section>

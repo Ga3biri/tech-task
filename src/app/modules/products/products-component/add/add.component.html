@@ -1,0 +1,48 @@
+
+<section id="add-product">
+    <div class="container mt-3">
+        <nav>
+            <div class="row justify-content-center mb-3">
+                <button class="btn btn-success" (click)="backToLogin()" >Back to login</button>
+            </div>
+        </nav>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="submit()">
+                            <!-- <div class="form-group">
+                                <label for="">Product Image  </label>
+                                <ngx-dropzone (change)="onSelect($event)" accept="image/jpeg,image/jpg,image/png,image/gif" [multiple]="false" >
+                                    <ngx-dropzone-label>Click to choose product image    </ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)" [file]="f" >
+                                        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="">Title</label>
+                                <input type="text" class="form-control" formControlName="title" [ngClass]="{'error': f.title.errors && submitted}">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Price</label>
+                                <input type="number" class="form-control" formControlName="price" [ngClass]="{'error': f.price.errors && submitted}">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Category</label>
+                                <input type="text" class="form-control" formControlName="category" [ngClass]="{'error': f.category.errors && submitted}">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Description</label>
+                                <textarea cols="30" rows="3" class="form-control" formControlName="description" [ngClass]="{'error': f.description.errors && submitted}"></textarea>
+                            </div>
+                            <div class="form-group text-center mt-5">
+                                <button class="btn btn-primary" type="submit">Add Product </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

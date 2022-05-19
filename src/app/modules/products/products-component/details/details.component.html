@@ -1,0 +1,37 @@
+<h3 class="text-center">Product Details   </h3> 
+ <br>
+<table class="table">
+    <tbody>
+      
+      <tr>
+        <th scope="row">Title  </th>
+        <td>{{product?.title}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Price   </th>
+        <td>{{product?.price}} </td>
+      </tr>
+      <tr>
+        <th scope="row">Category  </th>
+        <td>{{product?.category}} </td>
+      </tr>
+      <tr>
+        <th scope="row">Description  </th>
+        <td>{{product?.description}} </td>
+      </tr>
+      <tr>
+        <th scope="row">rating  </th>
+        <td>{{product?.rating?.rate}}/5 </td>
+      </tr>
+      <tr>
+        <th scope="row">count  </th>
+        <td>{{product?.rating?.count}} </td>
+      </tr>
+      <tr>
+        <th scope="row">Image</th>
+        <td>
+            <img style="width: 80px;height: 80px;border-radius: 50%;" src="{{product?.image}}" alt="">
+        </td>
+      </tr>
+    </tbody>
+  </table>

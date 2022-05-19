@@ -1,0 +1,18 @@
+section#login{
+    .container{
+        margin: 150px auto;
+        .card{
+            cursor: pointer;
+                background: rgb(232, 232, 248);
+            &:hover{
+                background: rgb(190, 190, 238);
+            }
+        }
+        .error{
+            border: 1px solid red;
+            &::placeholder{
+                color: red;
+            }
+        }
+    }
+}
